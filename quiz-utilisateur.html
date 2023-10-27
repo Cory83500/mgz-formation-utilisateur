@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Quiz ajout utilisateurs</title>
+  <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+  <h1>Quiz ajout utilisateurs</h1>
+  <div class="quiz">
+    <p>Testez vos connaissances sur Ma Gestion Zen en répondant aux questions suivantes.</p>
+
+    <!-- Question 1 -->
+    <div class="quiz-question">
+        <h3>Question 1 : Quelle interface est destinée au personnel administratif ?</h3>
+        <input type="radio" name="q1" value="interne"> Interne<br>
+        <input type="radio" name="q1" value="moniteur"> Moniteur<br>
+    </div>
+
+    <!-- Question 2 -->
+    <div class="quiz-question">
+        <h3>Question 2 : Quel est le niveau d'accès qui offre des fonctionnalités avancées ?</h3>
+        <input type="radio" name="q2" value="administrateur"> Administrateur<br>
+        <input type="radio" name="q2" value="directeur"> Directeur<br>
+    </div>
+
+    <!-- Question 3 -->
+    <div class="quiz-question">
+        <h3>Question 3 : Qui peut accéder à la gestion des leçons et du planning ?</h3>
+        <input type="radio" name="q3" value="enseignant"> Enseignant<br>
+        <input type="radio" name="q3" value="agent"> Agent<br>
+    </div>
+
+    <!-- Question 4 -->
+    <div class="quiz-question">
+        <h3>Question 4 : Que signifie la case "Actif" lors de la création d'un nouvel utilisateur ?</h3>
+        <input type="radio" name="q4" value="oui"> L'utilisateur est actif et apparaît sur le planning.<br>
+        <input type="radio" name="q4" value="non"> L'utilisateur est inactif et n'apparaît pas sur le planning.<br>
+    </div>
+
+    <!-- Question 5 -->
+    <div class="quiz-question">
+        <h3>Question 5 : Comment peut-on réactiver un utilisateur désactivé ?</h3>
+        <input type="radio" name="q5" value="enregistrer"> En enregistrant l'utilisateur à nouveau.<br>
+        <input type="radio" name="q5" value="oui"> En cochant la case "Actif" pour le réactiver.<br>
+    </div>
+
+    <button class="button" id="submit-button">Soumettre</button>
+
+    <!-- Message et boutons -->
+    <div id="message-container" style="display: none;">
+        <p id="message" class="quiz-question">
+        Bravo, votre score est de 70% ! Vous avez compris cette leçon.
+        </p>
+        <img class="logo" src="./asset/logo mgz.jpeg" alt="Image d'illustration" id="message-image">
+        <div class="button-container" id="results">
+        <button id="home-button" onclick="location.href='index.html'">Accueil</button>
+        <button id="previous-quiz-button" onclick="location.href='formation_utilisateur.html'">Revoir la formation</button>
+        <button id="retry-quiz-button" onclick="location.href='quiz-utilisateur.html'">Refaire le quiz</button>
+        </div>
+    </div>
+  
+
+  <script src="script/quiz.js"></script>
+</body>
+</html>

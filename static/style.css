@@ -1,0 +1,229 @@
+/* Style de base pour votre formation LMS */
+
+/* Utilisation de la police "Inter" */
+
+body {
+    font-family: 'Inter', sans-serif;
+    margin-left: 150px;
+    max-width: 900px;
+  }
+
+  .centered-container {
+    text-align: center;
+  }
+
+  .bold-text {
+    font-weight: bold;
+  }
+    
+  li {
+    margin-top: 20px;
+  }
+
+  img {
+    display: block;
+    margin: 50px auto 50px auto ;
+  }
+
+  .logo {
+    width: 20%;
+    height: 20%;
+  }
+
+  h1 {
+    text-align: center;
+  }
+  
+  /* Style des titres */
+  h1, h2, h3 {
+    font-weight: bold;
+    color: #333;
+    margin-top: 20px;
+    margin-bottom: 30px;
+
+  }
+  
+  /* Style des paragraphes */
+  p {
+    line-height: 1.4;
+    color: #0b0b0b;
+  }
+  
+  /* Style des liens hypertextes */
+  a {
+    color: #007BFF;
+    text-decoration: none;
+  }
+  
+  a:hover {
+    text-decoration: underline;
+  }
+  
+  /* Style des sections */
+  section {
+    background-color: #f7f7f7;
+    padding: 20px;
+    margin: 20px 0;
+  }
+  
+  /* Style des images */
+  img {
+    max-width: 100%;
+    height: auto;
+  }
+  
+  /* Style des boutons */
+  .button {
+    background-color: #007BFF;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .button:hover {
+    background-color: #0056b3;
+  }
+  
+  /* Style des zones de formulaire */
+  input, textarea {
+    width: 100%;
+    padding: 10px;
+    margin: 5px 0;
+  }
+  
+  /* Style des sections d'exercices ou de quiz */
+  .quiz-section {
+    background-color: #fff;
+    border: 1px solid #ccc;
+    padding: 20px;
+    margin: 20px 0;
+  }
+  
+  /* Style des questions d'exercices ou de quiz */
+  .question {
+    font-weight: bold;
+  }
+  
+  /* Exemple de style pour un pied de page */
+  footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 10px;
+  }
+  
+  video {
+    background-color: #222; /* Couleur de fond */
+    border: 2px solid #444; /* Bordure */
+    border-radius: 10px; /* Coins arrondis */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); /* Ombre */
+  }
+  
+  video::-webkit-media-controls {
+    background-color: transparent; /* Fond des contrôles */
+    color: #fff; /* Couleur du texte des contrôles */
+  }
+  
+  video::-webkit-media-controls-play-button {
+    background-color: #0078d4; /* Couleur du bouton de lecture */
+  }
+  
+  video::-webkit-media-controls-volume-slider {
+    background-color: #0078d4; /* Couleur du curseur de volume */
+  }
+  
+.button {
+  background-color: #5CB85B;
+  color: #fff;
+  font-size: large;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  width: 20%;
+}
+
+.button:hover {
+  background-color: #439D44;
+}
+
+.quiz-question {
+  background-color: #f7f7f7;
+  padding: 20px;
+  margin: 20px 0;
+}
+
+.quiz-question input[type="radio"] {
+  width: 15px; /* Réduire la taille des boutons radio */
+  height: 15px; /* Réduire la taille des boutons radio */
+  border: 2px solid #333;
+  border-radius: 50%;
+  margin-right: 5px;
+  position: relative;
+  cursor: pointer;
+}
+
+.quiz-question input[type="radio"]::before {
+  content: '';
+  width: 6px; /* Réduire la taille des boutons radio */
+  height: 6px; /* Réduire la taille des boutons radio */
+  background-color: #333;
+  border-radius: 50%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  opacity: 0;
+  transition: opacity 0.2s ease;
+}
+
+.quiz-question input[type="radio"]:hover::before {
+  background-color: #007BFF; /* Change la couleur au survol */
+}
+
+.quiz-question input[type="radio"]:checked::before {
+  opacity: 1;
+}
+
+/* CSS pour le message et les boutons */
+#message-container {
+  display: none;
+  text-align: center;
+  animation-fill-mode: forwards;
+}
+
+#message {
+  background-color: #f7f7f7;
+  padding: 20px;
+  margin: 20px 0;
+  border-radius: 10px;
+}
+
+.button-container {
+  margin: 20px 0;
+}
+
+.button-container button {
+  background-color: #5CB85B;
+  color: #fff;
+  font-size: large;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 10px;
+  margin: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.button-container button:hover {
+  background-color: #439D44;
+}
+
+#message-image {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: 20px auto;
+}
+
