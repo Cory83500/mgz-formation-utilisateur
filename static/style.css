@@ -240,6 +240,7 @@ body {
   border: 1px solid #ff3333; /* Bordure autour de l'encadré des erreurs */
   padding: 10px; /* Espace intérieur de l'encadré des erreurs */
   margin-top: 20px; /* Marge en haut de l'encadré des erreurs */
+  border-radius: 10px;
 }
 
 #errors-list {

@@ -1,6 +1,7 @@
 document.addEventListener("DOMContentLoaded", function () {
   // Écoutez le clic sur le bouton "Soumettre"
   document.getElementById("submit-button").addEventListener("click", function (e) {
+
     // Récupérez les réponses et réinitialisez les radios
     const answers = [];
     answers.push(document.querySelector('input[name="q1"]:checked'));
@@ -8,12 +9,6 @@ document.addEventListener("DOMContentLoaded", function () {
     answers.push(document.querySelector('input[name="q3"]:checked'));
     answers.push(document.querySelector('input[name="q4"]:checked'));
     answers.push(document.querySelector('input[name="q5"]:checked'));
-
-    // Réinitialisez les radios
-    const radioButtons = document.querySelectorAll('input[type="radio"]');
-    radioButtons.forEach(function (radioButton) {
-      radioButton.checked = false;
-    });
 
     // Vérifiez si au moins une question n'a pas de réponse
     const isAnyQuestionUnanswered = answers.some((answer) => !answer);
@@ -37,6 +32,14 @@ document.addEventListener("DOMContentLoaded", function () {
 
       // Score en pourcentage
       const score = (correctCount / correctAnswers.length) * 100;
+
+      // Réinitialisez les radios seulement si toutes les questions ont été correctement répondues
+      const radioButtons = document.querySelectorAll('input[type="radio"]');
+      if (correctCount === answers.length) {
+        radioButtons.forEach(function (radioButton) {
+          radioButton.checked = false;
+        });
+      }
 
       // Affichez les erreurs et les bonnes réponses
       const errorsContainer = document.getElementById("errors-container");
