@@ -72,19 +72,7 @@ body {
     height: auto;
   }
   
-  /* Style des boutons */
-  .button {
-    background-color: #007BFF;
-    color: #fff;
-    padding: 10px 20px;
-    border: none;
-    cursor: pointer;
-  }
-  
-  .button:hover {
-    background-color: #0056b3;
-  }
-  
+
   /* Style des zones de formulaire */
   input, textarea {
     width: 100%;
@@ -154,6 +142,23 @@ body {
   background-color: #439D44;
 }
 
+.button1 {
+  background-color: #5CB85B;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+}
+
+.button1:hover {
+  background-color: #439D44;
+}
+
+.button-container {
+  text-align: center;
+}
+
 .quiz-question {
   background-color: #f7f7f7;
   padding: 20px;
@@ -196,14 +201,26 @@ body {
 #message-container {
   display: none;
   text-align: center;
-  animation-fill-mode: forwards;
+  animation-fill-mode: forwards; 
 }
 
 #message {
-  background-color: #f7f7f7;
   padding: 20px;
   margin: 20px 0;
   border-radius: 10px;
+  padding: 10px; /* Espace intérieur de l'encadré des erreurs */
+  margin-top: 20px; /* Marge en haut de l'encadré des erreurs */
+}
+
+#message.below-50 {
+  background-color: #ffcccc; /* Couleur de fond pour l'encadré des erreurs */
+  border: 1px solid #ff3333; /* Bordure autour de l'encadré des erreurs */
+
+}
+
+#message.above-50 {
+  background-color: #d5ffcc; /* Couleur de fond pour l'encadré des erreurs */
+  border: 1px solid #52ff33; /* Bordure autour de l'encadré des erreurs */
 }
 
 .button-container {
@@ -290,3 +307,96 @@ body {
   }
 }
 
+/* Style de la barre de recherche */
+.search-box {
+  margin: 20px auto;
+  max-width: 300px;
+}
+
+.search-box h2 {
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+input[type="text"] {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+
+.course-card img {
+  max-width: 100%;
+}
+
+
+.button {
+  display: block;
+  margin: 10px auto;
+  padding: 10px 20px;
+  background-color: #5CB85B; /* Couleur du bouton */
+  color: #fff; /* Couleur du texte du bouton */
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+
+/* Styles des cartes de formation améliorés */
+.course-card {
+  margin: 20px;
+  display: inline-block;
+  width: 300px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  padding: 10px;
+  text-decoration: none;
+  color: #000;
+  position: relative;
+  overflow: hidden;
+}
+
+.course-card:hover {
+  text-decoration: none;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  transform: scale(1.05);
+  transition: all 0.3s ease-in-out;
+}
+
+/* Styles de la boîte de dialogue (popup) */
+.popup {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  z-index: 1;
+  align-items: center;
+  justify-content: center;
+}
+
+.popup-content {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  position: relative;
+}
+
+.close {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+.formation {
+
+  display: flex;
+  justify-content: center;
+}

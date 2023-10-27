@@ -3,11 +3,54 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Acceuil</title>
+    <title>Accueil</title>
     <link rel="stylesheet" href="static/style.css">
 </head>
 <body>
-    <img src="asset/ma_gestion_zen.png" alt="">
-    <button class="button" onclick="location.href='formation_utilisateur.html'">Formation utilisateur</button>
+    <img src="asset/ma_gestion_zen.png" alt="Logo">
+    <div class="search-box">
+        <h2>Quel tuto avez-vous besoin ?</h2>
+        <input type="text" placeholder="Recherche">
+    </div>
+
+    <div class="formation">
+        <div class="formation1">
+            <div class="course-card">
+                <img src="asset/user.png" alt="Création utilisateur">
+                <button class="button" data-popup="popup1">Création utilisateur</button>
+                <div class="button-container"><button class="button1">détails</button></div>
+            </div>
+            <div class="popup" id="popup1">
+                <div class="popup-content">
+                    <span class="close" id="close-popup1">&times;</span>
+                    <h2>Aperçu du Contenu : 🫣</h2>
+                    <p>Dans cette leçon, nous couvrirons les éléments suivants :</p>
+                    <ul>
+                        <li>Différenciation des Interfaces : Interne et Moniteur.</li>
+                        <li>Niveaux d'accès : Visiteur, Administrateur, Directeur, Enseignant et Agent.</li>
+                        <li>Suppression d'utilisateur : Désactivation plutôt que suppression.</li>
+                        <li>Création d'un nouvel utilisateur, y compris les détails spécifiques à remplir.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    
+        <div class="formation2">
+            <div class="course-card">
+                <img src="asset/user.png" alt="Création utilisateur">
+                <button class="button" data-popup="popup2">Création agence</button>
+                <div class="button-container"><button class="button1">détails</button></div>
+            </div>
+            <div class="popup" id="popup2">
+                <div class="popup-content">
+                    <span class="close" id="close-popup2">&times;</span>
+                    <h2>Aperçu du Contenu : 🫣</h2>
+                    <p>Ceci n'est qu'un exemple, la formation n'existe pas encore.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+<script src="script/home.js"></script>
 </body>
 </html>

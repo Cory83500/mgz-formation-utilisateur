@@ -1,7 +1,6 @@
 document.addEventListener("DOMContentLoaded", function () {
   // Écoutez le clic sur le bouton "Soumettre"
   document.getElementById("submit-button").addEventListener("click", function (e) {
-
     // Récupérez les réponses et réinitialisez les radios
     const answers = [];
     answers.push(document.querySelector('input[name="q1"]:checked'));
@@ -105,6 +104,13 @@ document.addEventListener("DOMContentLoaded", function () {
       }
       message.textContent = messageText;
       messageImage.src = messageImageSrc;
+
+      // Mettez à jour la classe de l'élément #message en fonction du score
+      if (score < 50) {
+        message.classList.add("below-50");
+      } else {
+        message.classList.add("above-50");
+      }
     }
   });
 });
