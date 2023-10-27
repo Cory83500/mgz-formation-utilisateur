@@ -55,13 +55,13 @@ document.addEventListener("DOMContentLoaded", function() {
 
       if (score >= 70) {
         messageText = `👏 Bravo, votre score est de ${score}% ! Vous avez compris cette leçon.`;
-        messageImageSrc = "./asset/logo mgz.jpeg";
+        messageImageSrc = "./asset/logo_mgz.jpeg";
       } else if (score >= 50) {
         messageText = `👏 Bien, vous avez ${score}% de bonnes réponses ! Attention, il semble que vous ayez compris le cours dans son ensemble. N'hésitez pas à revenir sur les points qui vous semblent flous.`;
-        messageImageSrc = "./asset/logo mgz.jpeg";
+        messageImageSrc = "./asset/logo_mgz.jpeg";
       } else {
         messageText = `⚠️ Attention, votre score est de ${score}% ! Mais rien n'est grave, nous vous conseillons de revoir le cours pour améliorer votre score.`;
-        messageImageSrc = "./asset/logo mgz.jpeg";
+        messageImageSrc = "./asset/logo_mgz.jpeg";
       }
       message.textContent = messageText;
       messageImage.src = messageImageSrc;
