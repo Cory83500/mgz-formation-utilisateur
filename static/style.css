@@ -227,3 +227,17 @@ body {
   margin: 20px auto;
 }
 
+/* Styles pour les tablettes (largeur d'écran < 768px) */
+@media screen and (max-width: 768px) {
+  body {
+      font-size: 16px; /* Ajustez la taille de police pour les tablettes */
+  }
+}
+
+/* Styles pour les smartphones (largeur d'écran < 480px) */
+@media screen and (max-width: 480px) {
+  body {
+      font-size: 14px; /* Ajustez la taille de police pour les smartphones */
+      margin-left: 10px; /* Ajustez la marge pour les smartphones */
+  }
+}
