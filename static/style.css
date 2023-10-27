@@ -138,17 +138,20 @@ body {
   width: 20%;
 }
 
+
 .button:hover {
   background-color: #439D44;
 }
+
 
 .button1 {
   background-color: #5CB85B;
   color: #fff;
   padding: 10px 20px;
   border: none;
-  border-radius: 50px;
+  border-radius: 10px;
   cursor: pointer;
+
 }
 
 .button1:hover {
@@ -271,42 +274,6 @@ body {
   margin-bottom: 5px; /* Marge en bas de chaque erreur */
 }
 
-
-@media screen and (max-width: 1370px) {
-  body {
-      font-size: 15px; 
-      margin-left: 50px;
-      max-width: 800px;
-  }
-}
-
-@media screen and (max-width: 1200px) {
-  body {
-    font-size: 15px; 
-    max-width: 700px;
-  }
-
-  .button {
-    width: 200px;
-  }
-
-}
-
-@media screen and (max-width: 1073px) {
-  body {
-    font-size: 15px; 
-    max-width: 650px;
-  }
-
-}
-
-@media screen and (max-width: 990px) {
-  body {
-    font-size: 15px; 
-    max-width: 500px;
-  }
-}
-
 /* Style de la barre de recherche */
 .search-box {
   margin: 20px auto;
@@ -330,20 +297,6 @@ input[type="text"] {
 .course-card img {
   max-width: 100%;
 }
-
-
-.button {
-  display: block;
-  margin: 10px auto;
-  padding: 10px 20px;
-  background-color: #5CB85B; /* Couleur du bouton */
-  color: #fff; /* Couleur du texte du bouton */
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  text-decoration: none;
-}
-
 
 /* Styles des cartes de formation améliorés */
 .course-card {
@@ -400,3 +353,63 @@ input[type="text"] {
   display: flex;
   justify-content: center;
 }
+
+@media screen and (max-width: 1370px) {
+  body {
+      font-size: 15px; 
+      margin-left: 50px;
+      max-width: 800px;
+  }
+  
+}
+
+@media screen and (max-width: 1200px) {
+  body {
+    font-size: 15px; 
+    max-width: 700px;
+  }
+
+  .formation1 {
+    margin-left: 200px;
+  }
+
+}
+
+@media screen and (max-width: 1073px) {
+  body {
+    font-size: 15px; 
+    max-width: 650px;
+  }
+ 
+}
+
+@media screen and (max-width: 990px) {
+  body {
+    font-size: 15px; 
+    max-width: 500px;
+  }
+}
+
+@media screen and (max-width: 860px) {
+
+  .formation {
+    display: block;
+    margin-left: 50px;
+  }
+
+  .formation1 {
+    margin-left: auto;
+  }
+
+
+}
+
+@media screen and (max-width: 553px) {
+
+  .button {
+    width: 100px;
+  }
+}
+
+
+
