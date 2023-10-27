@@ -1,6 +1,6 @@
-document.addEventListener("DOMContentLoaded", function() {
+document.addEventListener("DOMContentLoaded", function () {
   // Écoutez le clic sur le bouton "Soumettre"
-  document.getElementById("submit-button").addEventListener("click", function(e) {
+  document.getElementById("submit-button").addEventListener("click", function (e) {
     // Récupérez les réponses et réinitialisez les radios
     const answers = [];
     answers.push(document.querySelector('input[name="q1"]:checked'));
@@ -11,7 +11,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
     // Réinitialisez les radios
     const radioButtons = document.querySelectorAll('input[type="radio"]');
-    radioButtons.forEach(function(radioButton) {
+    radioButtons.forEach(function (radioButton) {
       radioButton.checked = false;
     });
 
@@ -38,7 +38,44 @@ document.addEventListener("DOMContentLoaded", function() {
       // Score en pourcentage
       const score = (correctCount / correctAnswers.length) * 100;
 
-      // Faites défiler la page vers le score
+      // Affichez les erreurs et les bonnes réponses
+      const errorsContainer = document.getElementById("errors-container");
+      const errorsList = document.getElementById("errors-list");
+      const correctAnswersContainer = document.getElementById("correct-answers-container");
+
+      // Réinitialisez les conteneurs d'erreurs et de bonnes réponses
+      errorsList.innerHTML = "";
+      correctAnswersContainer.innerHTML = "";
+
+      // Parcourez les réponses de l'utilisateur et vérifiez les erreurs
+      for (let i = 0; i < answers.length; i++) {
+        if (answers[i].value !== correctAnswers[i]) {
+          const errorItem = document.createElement("li");
+          errorItem.textContent = `Question ${i + 1}: Vous avez répondu "${answers[i].value}", la réponse correcte était "${correctAnswers[i]}".`;
+          errorsList.appendChild(errorItem);
+        }
+      }
+
+      // Affichez les erreurs si des erreurs existent
+      if (errorsList.children.length > 0) {
+        errorsContainer.style.display = "block";
+      }
+
+      // Affichez également les bonnes réponses
+      const correctAnswersTitle = document.createElement("h3");
+      correctAnswersTitle.textContent = "Réponses correctes :";
+
+      const correctAnswersList = document.createElement("ul");
+      for (let i = 0; i < correctAnswers.length; i++) {
+        const correctAnswerItem = document.createElement("li");
+        correctAnswerItem.textContent = `Question ${i + 1}: ${correctAnswers[i]}`;
+        correctAnswersList.appendChild(correctAnswerItem);
+      }
+
+      correctAnswersContainer.appendChild(correctAnswersTitle);
+      correctAnswersContainer.appendChild(correctAnswersList);
+
+      // Faites défiler la page vers le résultat
       const messageContainer = document.getElementById("message-container");
       messageContainer.style.display = "block";
       messageContainer.scrollIntoView({ behavior: "smooth" });

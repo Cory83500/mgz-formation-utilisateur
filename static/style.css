@@ -233,6 +233,26 @@ body {
   margin: 20px auto;
 }
 
+/* Style pour les erreurs */
+#errors-container {
+  display: none;
+  background-color: #ffcccc; /* Couleur de fond pour l'encadré des erreurs */
+  border: 1px solid #ff3333; /* Bordure autour de l'encadré des erreurs */
+  padding: 10px; /* Espace intérieur de l'encadré des erreurs */
+  margin-top: 20px; /* Marge en haut de l'encadré des erreurs */
+}
+
+#errors-list {
+  list-style-type: none;
+  padding: 0;
+}
+
+#errors-list li {
+  color: #ff0000; /* Couleur du texte des erreurs */
+  font-weight: bold; /* Texte en gras */
+  margin-bottom: 5px; /* Marge en bas de chaque erreur */
+}
+
 
 @media screen and (max-width: 1370px) {
   body {
@@ -268,3 +288,4 @@ body {
     max-width: 500px;
   }
 }
+
