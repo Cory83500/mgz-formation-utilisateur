@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Quiz Création d'Agences</title>
+  <link rel="stylesheet" href="static/style.css">
+</head>
+<body>
+  <h1>Quiz Création d'Agences</h1>
+  <div class="quiz">
+    <p>Testez vos connaissances sur la création d'agences dans "Ma Gestion Zen" en répondant aux questions suivantes :</p>
+
+    <!-- Questions -->
+    <div class="quiz-question">
+        <h3>Question 1 : Où devez-vous cliquer pour accéder à la gestion des agences ?</h3>
+        <input type="radio" name="q1" value="configuration"> Onglet "Configuration" / "Agence"<br>
+        <input type="radio" name="q1" value="general"> Onglet "Configuration" / "Général" / "Agence"<br>
+    </div>
+
+    <div class="quiz-question">
+        <h3>Question 2 : Les "informations générales" sont-elle importante a remplir pour la génération de contrat ?</h3>
+        <input type="radio" name="q2" value="oui"> Oui<br>
+        <input type="radio" name="q2" value="non"> Non<br>
+    </div>
+
+    <div class="quiz-question">
+        <h3>Question 3 : Comment ajoutez-vous un numéro d'agrément unique pour une agence ?</h3>
+        <input type="radio" name="q3" value="cas_1"> En remplissant le cadre "Agrément"<br>
+        <input type="radio" name="q3" value="cas_2"> En remplissant la ligne "Agrément ANTS"<br>
+    </div>
+
+    <div class="quiz-question">
+        <h3>Question 4 : Quelle action valide la création d'une agence ?</h3>
+        <input type="radio" name="q4" value="engager"> Cliquer sur "Engager"<br>
+        <input type="radio" name="q4" value="ajouter"> Cliquer sur "Ajouter"<br>
+    </div>
+
+    <div class="quiz-question">
+        <h3>Question 5 : Où ajoutez-vous un logo pour toutes les agences ?</h3>
+        <input type="radio" name="q5" value="configuration"> Onglet "Configuration d'Application" / "Général" / "Titre et logo"<br>
+        <input type="radio" name="q5" value="parametres"> Paramètres de l'agence<br>
+    </div>
+
+    <button class="button" id="submit-button">Soumettre</button>
+
+    <!-- Résultats -->
+    <div id="message-container" style="display: none;">
+        <p id="message" class="quiz-question">
+        Félicitations ! Votre score est de 80%. Vous avez bien compris la création d'agences dans "Ma Gestion Zen".
+        </p>
+        <img class="logo" src="asset/logo_mgz.jpeg" alt="Image d'illustration" id="message-image">
+        <div class="button-container" id="results">
+        <button id="home-button" onclick="location.href='index.html'">Accueil</button>
+        <button id="previous-quiz-button" onclick="location.href='formation_agence.html'">Revoir la formation</button>
+        <button id="retry-quiz-button" onclick="location.href='quiz-agence.html'">Refaire le quiz</button>
+        </div>
+    </div>
+    <div id="errors-container" style="display: none;">
+      <h3>Erreurs ❌ :</h3>
+      <ul id="errors-list"></ul>
+    </div>
+    <div id="correct-answers-container" style="display: none;"></div>
+  </div>
+
+  <script src="script/quiz_agence.js"></script>
+</body>
+</html>
